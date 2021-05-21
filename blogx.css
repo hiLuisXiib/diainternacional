@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|PT+Serif:400,400i,700,700i';
+@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
 *:not(.material-icons, .ri) {
-    font-family: "PT Serif", serif;
+    font-family: "Roboto", serif;
     transition: all 0.3s ease-in-out !important;
 }
 
@@ -40,9 +40,10 @@ body {
 }
 
 .head .twrapper .title>h1 {
-    font-size: 45px;
+    font-size: 50px;
     color: #fff;
-    line-height: 1.3;
+    line-height: 1;
+    padding-bottom: 5px;
 }
 
 .head .twrapper .title>h3 {
@@ -62,14 +63,13 @@ body {
 
 .head .twrapper .author>h1,
 .head .twrapper .author h3 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
 }
 
 .head .twrapper .author>h3 {
     font-size: 13px;
     color: #bbb;
-    text-transform: uppercase;
     line-height: 1.3;
 }
 
