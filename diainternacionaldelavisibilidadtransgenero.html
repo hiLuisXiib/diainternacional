@@ -70,6 +70,109 @@
         }
     </style>
 
+    <style>
+        .trapdoor {
+            -webkit-transform: translateZ(0px);
+            -webkit-font-smoothing: antialiased;
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            box-shadow: inset -7px 0px 12px -8px rgba(255, 255, 255, 0.3), inset 7px 0px 12px -8px rgba(255, 255, 255, 0.3);
+            background: none;
+            -webkit-transition: background 400ms ease-in-out;
+            -moz-transition: background 400ms ease-in-out;
+            -ms-transition: background 400ms ease-in-out;
+            -o-transition: background 400ms ease-in-out;
+            transition: background 400ms ease-in-out;
+        }
+        
+        .trapdoor:hover {
+            background: none;
+        }
+        
+        .trapdoor:hover .door {
+            box-shadow: 0px 0px 10px -2px none;
+            -webkit-transform: scale(1.08);
+            -moz-transform: scale(1.08);
+            -ms-transform: scale(1.08);
+            -o-transform: scale(1.08);
+            transform: scale(1.08);
+        }
+        
+        .trapdoor:hover .top {
+            top: -50%;
+        }
+        
+        .trapdoor:hover .bottom {
+            top: 100%;
+        }
+        
+        .trapdoor .twitter-follow-button {
+            margin-left: -77px;
+            position: absolute !important;
+            margin-top: -14px;
+            left: 50%;
+            top: 50%;
+        }
+        
+        .top {
+            top: 0%;
+            left: 0px;
+        }
+        
+        .top:before {
+            top: 5px;
+        }
+        
+        .bottom {
+            top: 50%;
+            left: 0px;
+        }
+        
+        .bottom:before {
+            top: -20px;
+        }
+        
+        .door {
+            -webkit-transition: top 400ms, box-shadow 000ms, -webkit-transform 300ms;
+            -moz-transition: top 400ms, box-shadow 000ms, -moz-transform 300ms;
+            -ms-transition: top 400ms, box-shadow 000ms, -ms-transform 300ms;
+            -o-transition: top 400ms, box-shadow 0000ms, -o-transform 300ms;
+            transition: top 400ms, box-shadow 000ms, transform 300ms;
+            -webkit-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+            background-color: #fff;
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+            z-index: 2;
+            height: 50%;
+        }
+        
+        .door:before {
+            font-family: 'tweet', sans-serif;
+            position: absolute;
+            margin-left: -20px;
+            font-size: 35px;
+            display: block;
+            color: #4099FF;
+            content: "\e000";
+            width: 0px;
+            height: 20px;
+            left: 52%;
+        }
+        
+        @font-face {
+            font-family: 'tweet';
+            src: url("https://www.xiiber.com/lib/fonts/tweet.woff") format("woff");
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+
     <script type="application/json" src="jqjs.js"></script>
 
     <script>
@@ -107,7 +210,7 @@
                 <h2>31 de marzo</h2>
             </hgroup>
             <hgroup class="author">
-                <div id="xiiber_twitter_boton_blanco"> </div> 
+               
 
                 <!-- <a href="https://twitter.com/XiiberTravel?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @XiiberTravel</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
@@ -146,7 +249,27 @@
         
         <div class="actions" wfd-id="180">
             <span class="float-left">  <div class="ui heart rating" data-rating="0" data-max-rating="3"></div></span>
-        </div>
+                    </div>
+
+                    <div class="trapdoor">
+                        <div class="top door">
+                        </div>
+                        <div class="bottom door">
+                        </div>
+                        <a href="https://twitter.com/XiiberTravel" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="false">Follow @XiiberTravel</a>
+                        <script>
+                            ! function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = "https://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, "script", "twitter-wjs");
+                        </script>
+                    </div>
+
 
     </section>
 
