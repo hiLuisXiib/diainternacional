@@ -54,6 +54,14 @@ body {
     padding-bottom: 10px;
 }
 
+.head .twrapper .title>h2 {
+    font-size: 24px;
+    font-style: italic;
+    color: #bbb;
+    line-height: 1.3;
+    padding-bottom: 10px;
+}
+
 .head .twrapper .author {
     display: flex;
     flex-direction: column-reverse;
@@ -67,7 +75,18 @@ body {
     font-weight: 700;
 }
 
+.head .twrapper .author h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
 .head .twrapper .author>h3 {
+    font-size: 13px;
+    color: #bbb;
+    line-height: 1.3;
+}
+
+.head .twrapper .author>h2 {
     font-size: 13px;
     color: #bbb;
     line-height: 1.3;
@@ -285,6 +304,13 @@ section.share {
 }
 
 .next-up>*>hgroup>h3 {
+    font-size: 24px;
+    font-style: italic;
+    color: #bbb;
+    line-height: 1.3;
+}
+
+.next-up>*>hgroup>h2 {
     font-size: 24px;
     font-style: italic;
     color: #bbb;
