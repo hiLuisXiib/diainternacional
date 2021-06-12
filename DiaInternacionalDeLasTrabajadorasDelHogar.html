@@ -11,7 +11,7 @@
 -->
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 
 <head>
 
@@ -20,6 +20,9 @@
     <meta http-equiv="Content-Language" content="es-mx">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible " content="IE=edge ">
+    <meta http-equiv="Cache-Control" content="max-age=604800,must-revalidate">
+    <meta http-equiv="Connection" content=" keep-alive" />
+    <meta http-equiv="Accept-Encoding " content="gzip,deflate ">
 
 
     <title> 30 de marzo #DiaInternacionalDeLasTrabajadorasDelHogar</title>
@@ -57,10 +60,11 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.2/dist/lazyload.min.js" async></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous" async></script>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-
+    <script src="Semantic-UI-CSS-master/semantic.min.js" async></script>
 
     <style>
         .head {
@@ -263,14 +267,123 @@
             content: '\f004'
         }
     </style>
+    <style>
+        .trapdoor {
+            -webkit-transform: translateZ(0px);
+            -webkit-font-smoothing: antialiased;
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            box-shadow: inset -7px 0px 12px -8px rgba(255, 255, 255, 0.3), inset 7px 0px 12px -8px rgba(255, 255, 255, 0.3);
+            background: none;
+            -webkit-transition: background 400ms ease-in-out;
+            -moz-transition: background 400ms ease-in-out;
+            -ms-transition: background 400ms ease-in-out;
+            -o-transition: background 400ms ease-in-out;
+            transition: background 400ms ease-in-out;
+        }
+        
+        .trapdoor:hover {
+            background: none;
+        }
+        
+        .trapdoor:hover .door {
+            box-shadow: 0px 0px 10px -2px none;
+            -webkit-transform: scale(1.08);
+            -moz-transform: scale(1.08);
+            -ms-transform: scale(1.08);
+            -o-transform: scale(1.08);
+            transform: scale(1.08);
+        }
+        
+        .trapdoor:hover .top {
+            top: -50%;
+        }
+        
+        .trapdoor:hover .bottom {
+            top: 100%;
+        }
+        
+        .trapdoor .twitter-follow-button {
+            margin-left: -77px;
+            position: absolute !important;
+            margin-top: -14px;
+            left: 50%;
+            top: 50%;
+        }
+        
+        .top {
+            top: 0%;
+            left: 0px;
+        }
+        
+        .top:before {
+            top: 5px;
+        }
+        
+        .bottom {
+            top: 50%;
+            left: 0px;
+        }
+        
+        .bottom:before {
+            top: -20px;
+        }
+        
+        .door {
+            -webkit-transition: top 400ms, box-shadow 000ms, -webkit-transform 300ms;
+            -moz-transition: top 400ms, box-shadow 000ms, -moz-transform 300ms;
+            -ms-transition: top 400ms, box-shadow 000ms, -ms-transform 300ms;
+            -o-transition: top 400ms, box-shadow 0000ms, -o-transform 300ms;
+            transition: top 400ms, box-shadow 000ms, transform 300ms;
+            -webkit-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+            background-color: #fff;
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+            z-index: 2;
+            height: 50%;
+        }
+        
+        .door:before {
+            font-family: 'tweet', sans-serif;
+            position: absolute;
+            margin-left: -20px;
+            font-size: 35px;
+            display: block;
+            color: #4099FF;
+            content: "\e000";
+            width: 0px;
+            height: 20px;
+            left: 52%;
+        }
+        
+        @font-face {
+            font-family: 'tweet';
+            src: url("https://www.xiiber.com/lib/fonts/tweet.woff") format("woff");
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
 
+    <script type="application/json" src="jqjs.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#xiiber_twitter_boton_blanco").load("xiiber_twitter_boton_blanco.html");
+        });
+    </script>
 </head>
 
 <body>
     <!-- partial:index.partial.html -->
     <div id="progress"></div>
 
-    <a class="w3-button w3-xlarge w3-circle w3-theme-action logo" style="position:fixed;top:60px;right:40px; " onclick="openNav()"> <img src="sgv/ico.svg" width="26" height="26" alt="Xiiber Travel con destino a Tepozspa"></a>
+    <a class="w3-button w3-xlarge w3-circle w3-theme-action logo" style="position:fixed;top:60px;right:40px; " onclick="openNav()"> <img src="sgv/ico.svg" width="26" height="26" alt="Xiiber Travel con destino a Tepozspa" loading="lazy"></a>
 
 
     <div id="mySidenav" class="sidenav">
@@ -285,7 +398,7 @@
 
 
 
-    <section class="head">
+    <section class="head" loading="lazy">
         <div class="twrapper">
             <hgroup class="title">
                 <h1 style="color: rgb(235, 225, 225); font-size: 50px; font-family: Roboto; font-weight: bold;">Día Internacional de las Trabajadoras del Hogar.</h1>
@@ -293,7 +406,8 @@
             </hgroup>
             <hgroup class="author">
                 <a href="https://twitter.com/XiiberTravel?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @XiiberTravel</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <script  src="https://platform.twitter.com/widgets.js"  async ></script>
+                <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.2/dist/lazyload.min.js" async></script>
                 
                 <h3 style="color: rgb(217, 222, 226); font-size: medium; font-family: Roboto; font-weight: bold;">Redacción Xiiber </h3>
                 
@@ -323,7 +437,7 @@
         <blockquote>
             <h1>Las personas trabajadoras del hogar, son aquellas que prestan servicios de aseo y asistencia al hogar de una persona o familia.
             </h1>
-            <h3>IMSS</h3>
+            <h2>IMSS</h2>
         </blockquote>
 
         <h2>Datos importantes</h2>
@@ -338,13 +452,32 @@
         
         <div class="actions" wfd-id="180">
             <span class="float-left">  <div class="ui heart rating" data-rating="0" data-max-rating="3"></div></span>
+            <div class="trapdoor">
+                <div class="top door">
+                </div>
+                <div class="bottom door">
+                </div>
+                <a href="https://twitter.com/XiiberTravel" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="false">Follow @XiiberTravel</a>
+                <script>
+                    ! function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "https://platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");
+                </script>
+            </div>
+
         </div>
 
     </section>
 
     <section class="text">
     <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Hoy conmemoramos el Día Internacional de las <a href="https://twitter.com/hashtag/TrabajadorasDelHogar?src=hash&amp;ref_src=twsrc%5Etfw">#TrabajadorasDelHogar</a>, admiramos y reconocemos la labor que realizan día con día como un trabajo digno. <a href="https://t.co/Zd5DonnZno">pic.twitter.com/Zd5DonnZno</a></p>&mdash; ISSSTE (@ISSSTE_mx) <a href="https://twitter.com/ISSSTE_mx/status/1376983532086693893?ref_src=twsrc%5Etfw">March 30, 2021</a></blockquote> 
-    <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Día Internacional de las Trabajadoras del Hogar. <a href="https://t.co/brmlU4TWN7">pic.twitter.com/brmlU4TWN7</a></p>&mdash; ONU Mujeres México (@ONUMujeresMX) <a href="https://twitter.com/ONUMujeresMX/status/1377109648206147584?ref_src=twsrc%5Etfw">March 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Día Internacional de las Trabajadoras del Hogar. <a href="https://t.co/brmlU4TWN7" >pic.twitter.com/brmlU4TWN7</a></p>&mdash; ONU Mujeres México (@ONUMujeresMX) <a href="https://twitter.com/ONUMujeresMX/status/1377109648206147584?ref_src=twsrc%5Etfw">March 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <blockquote class="twitter-tweet"><p lang="es" dir="ltr">El trabajo doméstico es un empleo digno. Discriminar por el origen o procedencia de las mujeres que contribuyen al bienestar del hogar nos impide impulsar cambios que las beneficien. 📘👉 <a href="https://t.co/gT55pHxpD0">https://t.co/gT55pHxpD0</a> <a href="https://twitter.com/hashtag/ComisionIntersecretarialContraLaTrata?src=hash&amp;ref_src=twsrc%5Etfw">#ComisionIntersecretarialContraLaTrata</a> <a href="https://t.co/u24esGFdB5">pic.twitter.com/u24esGFdB5</a></p>&mdash; OIM México (@OIM_Mexico) <a href="https://twitter.com/OIM_Mexico/status/1376985521495412743?ref_src=twsrc%5Etfw">March 30, 2021</a></blockquote> 
 
   </section>
@@ -364,7 +497,7 @@
 
 
     <section class="next-up">
-        <div class="left" style="background-image: url(image/31-marzo-dia-internacional-de-la-visibilidad-transgenero.webp);">
+        <div class="left" style="background-image: url(image/31-marzo-dia-internacional-de-la-visibilidad-transgenero.webp);" loading="lazy">
 
 
 
@@ -457,7 +590,12 @@
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.5.7/js/bootstrap.min.js'></script>
+<script src="https://hihellomonster.github.io/boiler/js/lazysizes.min.js " async></script>
 
+<link rel="preload " as="script " href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<link rel="preload " as="script " href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script> -->
 
 
 
